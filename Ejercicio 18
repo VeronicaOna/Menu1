@@ -96,7 +96,7 @@ def ejecutar_opcion(opcion):
             cronometro()
         except KeyboardInterrupt:
             print("\nCronómetro detenido.")
-           #Elaborado por Katty Puco
+           print ("Elaborado por: Katty Puco")
             
     elif opcion == 19:
         print("Ejecutando opción 19")
