@@ -1,0 +1,27 @@
+def es_vocal(caracter):
+    """
+    Función que determina si un carácter es una vocal.
+    """
+    vocales = ['a', 'e', 'i', 'o', 'u']
+    if caracter.lower() in vocales:
+        return True
+    else:
+        return False
+
+def main():
+    """
+    Función principal que solicita caracteres al usuario
+    e imprime si son vocales o no hasta que se ingrese un espacio.
+    """
+    while True:
+        caracter = input("Introduce un caracter (o espacio para salir): ")
+        if caracter == ' ':
+            print("Programa terminado.")
+            break
+        elif len(caracter) != 1:
+            print("Por favor, introduce solo un caracter.")
+        else:
+            if es_vocal(caracter):
+                print("VOCAL")
+            else:
+                print("NO VOCAL")
