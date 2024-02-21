@@ -1,0 +1,7 @@
+horas_trabajadas = [float(input(f"Ingrese las horas trabajadas del día {i + 1}: ")) for i in range(6)]
+total_horas = sum(horas_trabajadas)
+sueldo_por_hora = float(input("Ingrese el sueldo por hora: "))
+sueldo_total = total_horas * sueldo_por_hora
+
+print(f"Total de horas trabajadas: {total_horas} horas")
+print(f"Sueldo a recibir: {sueldo_total} €")
