@@ -5,3 +5,4 @@ sueldo_total = total_horas * sueldo_por_hora
 
 print(f"Total de horas trabajadas: {total_horas} horas")
 print(f"Sueldo a recibir: {sueldo_total} €")
+Elaborado por: Valeria Manobanda 
