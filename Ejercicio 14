@@ -6,3 +6,4 @@ tiempo_encuentro = (posicion_coche2 - posicion_coche1) / velocidad
 posicion_encuentro = posicion_coche1 + velocidad * tiempo_encuentro
 
 print(f"Los coches se encontrarán en el kilómetro {posicion_encuentro}")
+Elaborado por: Gabriel Gusqui 
