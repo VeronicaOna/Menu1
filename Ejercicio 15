@@ -11,3 +11,4 @@ for mes in range(total_meses):
     pago_mensual *= factor_duplicacion
 
 print(f"\nTotal pagado después de {total_meses} meses: {total_pago} €")
+Elaborado por: Gabriel Gusqui 
