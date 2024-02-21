@@ -69,6 +69,7 @@ def ejecutar_opcion(opcion):
             print("Es un número primo")
         else:
             print("No es un número primo")
+        print("Elaborado por Navarrete Maykel")
     elif opcion == 12:
         print("Ejecutando opción 12")
         # Agregar código para la opción 12
