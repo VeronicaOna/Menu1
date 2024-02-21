@@ -28,30 +28,7 @@ def ejecutar_opcion(opcion):
         # Agregar código para la opción 1
     elif opcion == 2:
         print("Ejecutando opción 2")
-        import random
-        def adivinar_numero():
-            numero_a_adivinar = random.randint(1, 100)
-            intentos = 10
-    
-            print("Bienvenido al juego de adivinar el número!")
-            print("Tienes 10 intentos para adivinar un número del 1 al 100.")
-    
-            while intentos > 0:
-                intento = int(input("Introduce un número: "))
-        
-                if intento < numero_a_adivinar:
-                    print("El número a adivinar es mayor.")
-                elif intento > numero_a_adivinar:
-                    print("El número a adivinar es menor.")
-                else:
-                    print("¡Felicidades! ¡Has adivinado el número en", 11 - intentos, "intentos!")
-                    return
-        
-                intentos -= 1
-    
-            print("Lo siento, has agotado tus intentos. El número era:", numero_a_adivinar)
-            print("Elaborado por Verónica Oña")
-        adivinar_numero()
+       # Agregar código para la opción 2
     elif opcion == 3:
         print("Ejecutando opción 3")
         # Agregar código para la opción 3
