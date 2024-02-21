@@ -1,0 +1,8 @@
+posicion_coche1 = 70
+posicion_coche2 = 150
+velocidad = float(input("Ingrese la velocidad de ambos coches: "))
+
+tiempo_encuentro = (posicion_coche2 - posicion_coche1) / velocidad
+posicion_encuentro = posicion_coche1 + velocidad * tiempo_encuentro
+
+print(f"Los coches se encontrarán en el kilómetro {posicion_encuentro}")
