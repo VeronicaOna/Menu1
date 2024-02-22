@@ -60,7 +60,7 @@ def ejecutar_opcion(opcion):
                 print (a, " * ", i,  " = ", b)
         tablas ()
         print ("Elaborado por: Bacuy David")
-        # Agregar código para la opción 10
+        
     elif opcion == 11:
         print("Ejecutando opción 11")
     elif opcion == 12:
