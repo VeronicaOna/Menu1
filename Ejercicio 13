@@ -64,35 +64,37 @@ def ejecutar_opcion(opcion):
     elif opcion == 13:
         print("Ejecutando opción 13")
        
+import time  # Agrega esta línea para importar el módulo time
+
+def mostrar_menu():
+    # ... (resto del código sin cambios)
+
 def calcular_sueldo(total_horas):
-    # Supongamos que el sueldo por hora es fijo, por ejemplo, $10 por hora.
-    sueldo_por_hora = 10
-    sueldo = total_horas * sueldo_por_hora
-    return sueldo
+    # ... (resto del código sin cambios)
+
+def cronometro():
+    segundos = 0
+    minutos = 0
+    horas = 0
+    while True:
+        print(f"{horas:02d}:{minutos:02d}:{segundos:02d}", end="\r")
+        time.sleep(1)  # Utiliza la función sleep del módulo time
+        segundos = segundos + 1
+        if segundos == 60:
+            segundos = 0
+            minutos = minutos + 1
+        if minutos == 60:
+            minutos = 0
+            horas = horas + 1
 
 def ejecutar_opcion(opcion):
-    if opcion == 1:
-        print("Ejecutando opción 1")
-        # Agregar código para la opción 1
-    # Resto de las opciones...
+    # ... (resto del código sin cambios)
 
-    elif opcion == 13:
-        print("Ejecutando opción 13")
-        # Agregar código para el Ejercicio 13
+def main():
+    # ... (resto del código sin cambios)
 
-        # Ingresar horas trabajadas para cada día de la semana
-        horas_trabajadas = [int(input(f"Ingrese las horas trabajadas para el día {i + 1}: ")) for i in range(6)]
-
-        # Calcular el total de horas trabajadas en la semana
-        total_horas = sum(horas_trabajadas)
-
-        # Calcular el sueldo correspondiente
-        sueldo = calcular_sueldo(total_horas)
-
-        # Mostrar resultados
-        print(f"Total de horas trabajadas: {total_horas} horas")
-        print(f"Sueldo correspondiente: ${sueldo}")
-
+if __name__ == "__main__":
+    main()
     # Resto de las opciones...
 
 
