@@ -4,36 +4,6 @@ def mostrar_menu():
     print("3. Opción 3")
     print("4. Opción 4")
     print("5. Opción 5")
-    def es_vocal(caracter):
-    """
-    Función que determina si un carácter es una vocal.
-    """
-    vocales = ['a', 'e', 'i', 'o', 'u']
-    if caracter.lower() in vocales:
-        return True
-    else:
-        return False
-
-def main():
-    """
-    Función principal que solicita caracteres al usuario
-    e imprime si son vocales o no hasta que se ingrese un espacio.
-    """
-    while True:
-        caracter = input("Introduce un caracter (o espacio para salir): ")
-        if caracter == ' ':
-            print("Programa terminado.")
-            break
-        elif len(caracter) != 1:
-            print("Por favor, introduce solo un caracter.")
-        else:
-            if es_vocal(caracter):
-                print("VOCAL")
-            else:
-                print("NO VOCAL")
-
-if __name__ == "__main__":
-    main()
     print("6. Opción 6")
     print("7. Opción 7")
     print("8. Opción 8")
@@ -58,30 +28,7 @@ def ejecutar_opcion(opcion):
         # Agregar código para la opción 1
     elif opcion == 2:
         print("Ejecutando opción 2")
-        import random
-        def adivinar_numero():
-            numero_a_adivinar = random.randint(1, 100)
-            intentos = 10
-    
-            print("Bienvenido al juego de adivinar el número!")
-            print("Tienes 10 intentos para adivinar un número del 1 al 100.")
-    
-            while intentos > 0:
-                intento = int(input("Introduce un número: "))
-        
-                if intento < numero_a_adivinar:
-                    print("El número a adivinar es mayor.")
-                elif intento > numero_a_adivinar:
-                    print("El número a adivinar es menor.")
-                else:
-                    print("¡Felicidades! ¡Has adivinado el número en", 11 - intentos, "intentos!")
-                    return
-        
-                intentos -= 1
-    
-            print("Lo siento, has agotado tus intentos. El número era:", numero_a_adivinar)
-            print("Elaborado por Verónica Oña")
-        adivinar_numero()
+        # Agregar código para la opción 2
     elif opcion == 3:
         print("Ejecutando opción 3")
         # Agregar código para la opción 3
@@ -90,7 +37,34 @@ def ejecutar_opcion(opcion):
         # Agregar código para la opción 4
     elif opcion == 5:
         print("Ejecutando opción 5")
-        # Agregar código para la opción 5
+        def es_vocal(caracter):
+            """
+            Función para verificar si un carácter es una vocal.
+            """
+            vocales = "aeiouAEIOU"
+            return caracter in vocales
+
+        def verificar_vocal():
+            """
+            Función principal que solicita caracteres y verifica si son vocales o no.
+            """
+            while True:
+                entrada = input("Introduce un caracter (o presiona Enter para salir): ")
+                if entrada == '':
+                    print("¡Adiós!")
+                    break
+                if len(entrada) == 1:
+                    if es_vocal(entrada):
+                        print("VOCAL")
+                    else:
+                        print("NO VOCAL")
+                else:
+                    print("Por favor, ingresa solo un caracter.")
+
+        # Llamada a la función principal para ejecutar el programa
+        if __name__ == "__main__":
+            verificar_vocal()
+            print("Elaborado por: Pamela Zurita")
     elif opcion == 6:
         print("Ejecutando opción 6")
         # Agregar código para la opción 6
