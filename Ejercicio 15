@@ -1,5 +1,5 @@
 def mostrar_menu():
-    print("1. Calcular pago mensual por adquisición de producto")
+    print("1. Opción 1")
     print("2. Opción 2")
     print("3. Opción 3")
     print("4. Opción 4")
@@ -19,7 +19,8 @@ def mostrar_menu():
     print("18. Opción 18")
     print("19. Opción 19")
     print("20. Opción 20")
-    print("21. Salir")
+    print("21. Opción 21")
+    print("22. Salir")
 
 def ejecutar_opcion(opcion):
     if opcion == 1:
