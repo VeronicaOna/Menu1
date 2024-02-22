@@ -1,3 +1,5 @@
+import time
+
 def mostrar_menu():
     print("1. Opción 1")
     print("2. Opción 2")
@@ -22,89 +24,81 @@ def mostrar_menu():
     print("21. Opción 21")
     print("22. Salir")
 
+def calcular_sueldo(total_horas):
+    sueldo_por_hora = 10
+    sueldo = total_horas * sueldo_por_hora
+    return sueldo
+
+def cronometro():
+    segundos = 0
+    minutos = 0
+    horas = 0
+    while True:
+        print(f"{horas:02d}:{minutos:02d}:{segundos:02d}", end="\r")
+        time.sleep(1)
+        segundos = segundos + 1
+        if segundos == 60:
+            segundos = 0
+            minutos = minutos + 1
+        if minutos == 60:
+            minutos = 0
+            horas = horas + 1
+
 def ejecutar_opcion(opcion):
     if opcion == 1:
         print("Ejecutando opción 1")
-        # Agregar código para la opción 1
+        def obtener_horas_trabajadas():
+            total_horas = 0
+            for dia in range(1, 7):
+                horas = int(input(f"Ingrese las horas trabajadas el día {dia}: "))
+                total_horas += horas
+            return total_horas
+
+        horas_trabajadas = obtener_horas_trabajadas()
+        print(f"Total de horas trabajadas: {horas_trabajadas}")
+        sueldo = calcular_sueldo(horas_trabajadas)
+        print(f"Sueldo a pagar: ${sueldo}")
     elif opcion == 2:
         print("Ejecutando opción 2")
-        # Agregar código para la opción 2
     elif opcion == 3:
         print("Ejecutando opción 3")
-        # Agregar código para la opción 3
     elif opcion == 4:
         print("Ejecutando opción 4")
-        # Agregar código para la opción 4
     elif opcion == 5:
         print("Ejecutando opción 5")
-        # Agregar código para la opción 5
     elif opcion == 6:
         print("Ejecutando opción 6")
-        # Agregar código para la opción 6
     elif opcion == 7:
         print("Ejecutando opción 7")
-        # Agregar código para la opción 7
     elif opcion == 8:
         print("Ejecutando opción 8")
-        # Agregar código para la opción 8
     elif opcion == 9:
         print("Ejecutando opción 9")
-        # Agregar código para la opción 9
     elif opcion == 10:
         print("Ejecutando opción 10")
-        # Agregar código para la opción 10
     elif opcion == 11:
         print("Ejecutando opción 11")
-        #Agregar código para la opción 11
     elif opcion == 12:
         print("Ejecutando opción 12")
-        # Agregar código para la opción 12
     elif opcion == 13:
         print("Ejecutando opción 13")
-
-
     elif opcion == 14:
         print("Ejecutando opción 14")
-        # Agregar código para el Ejercicio 14
-
-        # Posición inicial de los coches
-        posicion_coche1 = 70
-        posicion_coche2 = 150
-
-        # Velocidad constante de los coches
-        velocidad = 1  # Puedes ajustar la velocidad según tus necesidades
-
-        # Calcular el punto de encuentro
-        tiempo = (posicion_coche2 - posicion_coche1) / velocidad
-        punto_encuentro = posicion_coche1 + (velocidad * tiempo)
-
-        # Mostrar resultados
-        print(f"Los coches se encontrarán en el kilómetro {punto_encuentro}")
-
-    # Resto de las opciones...
-
-
-   elif opcion == 15:
+    elif opcion == 15:
         print("Ejecutando opción 15")
-        # Agregar código para la opción 15
     elif opcion == 16:
         print("Ejecutando opción 16")
-        # Agregar código para la opción 16
     elif opcion == 17:
         print("Ejecutando opción 17")
-        # Agregar código para la opción 17
     elif opcion == 18:
         print("Ejecutando opción 18")
-        # Agregar código para la opción 18
+        cronometro()
     elif opcion == 19:
         print("Ejecutando opción 19")
-        # Agregar código para la opción 19
     elif opcion == 20:
         print("Ejecutando opción 20")
-        # Agregar código para la opción 20
     elif opcion == 21:
         print("Ejecutando opción 21")
-        # Agregar código para la opción 21
     elif opcion == 22:
         print("Saliendo del programa...")
         exit()
