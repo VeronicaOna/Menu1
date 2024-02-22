@@ -1,14 +1,57 @@
-total_meses = 20
-pago_inicial = 10
-factor_duplicacion = 2
+def mostrar_menu():
+    print("1. Calcular pago mensual por adquisición de producto")
+    print("2. Opción 2")
+    print("3. Opción 3")
+    print("4. Opción 4")
+    print("5. Opción 5")
+    print("6. Opción 6")
+    print("7. Opción 7")
+    print("8. Opción 8")
+    print("9. Opción 9")
+    print("10. Opción 10")
+    print("11. Opción 11")
+    print("12. Opción 12")
+    print("13. Opción 13")
+    print("14. Opción 14")
+    print("15. Opción 15")
+    print("16. Opción 16")
+    print("17. Opción 17")
+    print("18. Opción 18")
+    print("19. Opción 19")
+    print("20. Opción 20")
+    print("21. Salir")
 
-total_pago = 0
-pago_mensual = pago_inicial
+def calcular_pago_mensual():
+    total_pagado = 0
+    pago_actual = 10
 
-for mes in range(total_meses):
-    total_pago += pago_mensual
-    print(f"Mes {mes + 1}: Pago mensual = {pago_mensual} € - Total pagado hasta ahora = {total_pago} €")
-    pago_mensual *= factor_duplicacion
+    for _ in range(20):
+        total_pagado += pago_actual
+        pago_actual *= 2
 
-print(f"\nTotal pagado después de {total_meses} meses: {total_pago} €")
-Elaborado por: Gabriel Gusqui 
+    print(f"El pago mensual es de {pago_actual/2} €")
+    print(f"El total pagado después de 20 meses es de {total_pagado} €")
+
+def ejecutar_opcion(opcion):
+    if opcion == 1:
+        print("Ejecutando opción 1")
+        calcular_pago_mensual()
+    elif opcion == 2:
+        print("Ejecutando opción 2")
+        # Agregar código para la opción 2
+    # ... Agregar el código para las demás opciones según sea necesario ...
+    elif opcion == 21:
+        print("Saliendo del programa...")
+        exit()
+    else:
+        print("Opción no válida")
+
+def main():
+    while True:
+        mostrar_menu()
+        opcion = int(input("Selecciona una opción: "))
+        ejecutar_opcion(opcion)
+
+if __name__ == "__main__":
+    main()
+print("Elaborado por Gabriel Gusqui")
