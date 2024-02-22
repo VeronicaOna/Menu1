@@ -1,5 +1,5 @@
 def mostrar_menu():
-    print("1. Calcular encuentro en carretera")
+    print("1. Opción 1")
     print("2. Opción 2")
     print("3. Opción 3")
     print("4. Opción 4")
@@ -19,27 +19,39 @@ def mostrar_menu():
     print("18. Opción 18")
     print("19. Opción 19")
     print("20. Opción 20")
-    print("21. Salir")
-
-def calcular_encuentro_carretera():
-    km_persona1 = 70
-    km_persona2 = 150
-
-    while km_persona1 != km_persona2:
-        km_persona1 += 1
-        km_persona2 -= 1
-
-    print(f"Se encontrarán en el kilómetro {km_persona1}")
+    print("21. Opción 21")
+    print("22. Salir")
 
 def ejecutar_opcion(opcion):
     if opcion == 1:
         print("Ejecutando opción 1")
-        calcular_encuentro_carretera()
+        # Agregar código para la opción 1
     elif opcion == 2:
         print("Ejecutando opción 2")
         # Agregar código para la opción 2
-    # ... Agregar el código para las demás opciones según sea necesario ...
-    elif opcion == 21:
+    # Resto de las opciones...
+
+    elif opcion == 14:
+        print("Ejecutando opción 14")
+        # Agregar código para el Ejercicio 14
+
+        # Posición inicial de los coches
+        posicion_coche1 = 70
+        posicion_coche2 = 150
+
+        # Velocidad constante de los coches
+        velocidad = 1  # Puedes ajustar la velocidad según tus necesidades
+
+        # Calcular el punto de encuentro
+        tiempo = (posicion_coche2 - posicion_coche1) / velocidad
+        punto_encuentro = posicion_coche1 + (velocidad * tiempo)
+
+        # Mostrar resultados
+        print(f"Los coches se encontrarán en el kilómetro {punto_encuentro}")
+
+    # Resto de las opciones...
+
+    elif opcion == 22:
         print("Saliendo del programa...")
         exit()
     else:
@@ -53,4 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-Print("Elaborado por Gabriel Gusqui")
