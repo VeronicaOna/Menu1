@@ -55,20 +55,7 @@ def ejecutar_opcion(opcion):
         # Agregar código para la opción 10
     elif opcion == 11:
         print("Ejecutando opción 11")
-        #Ejercicio 11
-        n=-1
-        while n<0:
-            n = int(input("Ingresa un número:"))
-        if n>0:
-            switch = 0
-        for i in range(2, int(n**0.5) + 1):
-            if n % i == 0:
-                switch = 1
-                break
-        if switch!=1:
-            print("Es un número primo")
-        else:
-            print("No es un número primo")
+        #Agregar código para la opción 11
     elif opcion == 12:
         print("Ejecutando opción 12")
         # Agregar código para la opción 12
