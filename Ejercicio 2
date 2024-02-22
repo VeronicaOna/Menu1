@@ -52,6 +52,7 @@ def ejecutar_opcion(opcion):
             print("Lo siento, has agotado tus intentos. El número era:", numero_a_adivinar)
             print("Elaborado por Verónica Oña")
         adivinar_numero()
+
     elif opcion == 3:
         print("Ejecutando opción 3")
         # Agregar código para la opción 3
