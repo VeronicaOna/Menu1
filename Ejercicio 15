@@ -64,7 +64,6 @@ def ejecutar_opcion(opcion):
         # Agregar código para la opción 13
     elif opcion == 14:
         print("Ejecutando opción 14")
-        # Agregar código para la opción 14
 
 
     elif opcion == 15:
