@@ -1,6 +1,7 @@
+import time
 
 def mostrar_menu():
-    print("1. Calcular sueldo por horas trabajadas")
+    print("1. Opción 1")
     print("2. Opción 2")
     print("3. Opción 3")
     print("4. Opción 4")
@@ -20,30 +21,41 @@ def mostrar_menu():
     print("18. Opción 18")
     print("19. Opción 19")
     print("20. Opción 20")
-    print("21. Salir")
+    print("21. Opción 21")
+    print("22. Salir")
 
-def calcular_sueldo_horas_trabajadas():
-    horas_por_dia = []
-    for i in range(6):
-        horas_por_dia.append(int(input(f"Ingrese las horas trabajadas del día {i+1}: ")))
-
-    sueldo_por_hora = float(input("Ingrese el sueldo por hora: "))
-
-    total_horas = sum(horas_por_dia)
-    sueldo_total = total_horas * sueldo_por_hora
-
-    print(f"Total de horas trabajadas en la semana: {total_horas} horas")
-    print(f"Sueldo total: {sueldo_total} €")
+def calcular_sueldo(total_horas):
+    # Supongamos que el sueldo por hora es fijo, por ejemplo, $10 por hora.
+    sueldo_por_hora = 10
+    sueldo = total_horas * sueldo_por_hora
+    return sueldo
 
 def ejecutar_opcion(opcion):
     if opcion == 1:
         print("Ejecutando opción 1")
-        calcular_sueldo_horas_trabajadas()
-    elif opcion == 2:
-        print("Ejecutando opción 2")
-        # Agregar código para la opción 2
-    # ... Agregar el código para las demás opciones según sea necesario ...
-    elif opcion == 21:
+        # Agregar código para la opción 1
+    # Resto de las opciones...
+
+    elif opcion == 13:
+        print("Ejecutando opción 13")
+        # Agregar código para el Ejercicio 13
+
+        # Ingresar horas trabajadas para cada día de la semana
+        horas_trabajadas = [int(input(f"Ingrese las horas trabajadas para el día {i + 1}: ")) for i in range(6)]
+
+        # Calcular el total de horas trabajadas en la semana
+        total_horas = sum(horas_trabajadas)
+
+        # Calcular el sueldo correspondiente
+        sueldo = calcular_sueldo(total_horas)
+
+        # Mostrar resultados
+        print(f"Total de horas trabajadas: {total_horas} horas")
+        print(f"Sueldo correspondiente: ${sueldo}")
+
+    # Resto de las opciones...
+
+    elif opcion == 22:
         print("Saliendo del programa...")
         exit()
     else:
@@ -57,4 +69,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-Print("Elaborado por Valeria Manobanda") 
