@@ -305,15 +305,71 @@ def ejecutar_opcion(opcion):
         
     elif opcion == 13:
         print("Ejecutando opción 13")
-        # Agregar código para la opción 13
-        
+        def ingresar_horas_trabajadas(dias):
+    horas_trabajadas = []
+    for i in range(dias):
+        horas = float(input(f"Ingrese las horas trabajadas el día {i+1}: "))
+        horas_trabajadas.append(horas)
+    return horas_trabajadas
+
+def calcular_total_horas(horas_trabajadas):
+    return sum(horas_trabajadas)
+
+def calcular_sueldo(total_horas, salario_por_hora):
+    return total_horas * salario_por_hora
+
+def main():
+    dias_trabajados = 6
+    horas_trabajadas = ingresar_horas_trabajadas(dias_trabajados)
+    salario_por_hora = 10  # Ejemplo: $10 por hora
+    total_horas_trabajadas = calcular_total_horas(horas_trabajadas)
+    sueldo = calcular_sueldo(total_horas_trabajadas, salario_por_hora)
+    print(f"Total de horas trabajadas durante la semana: {total_horas_trabajadas}")
+    print(f"Sueldo correspondiente: ${sueldo}")
+
+if __name__ == "__main__":
+    main()
+    print("Elaborado por Valeria Manobanda")         
     elif opcion == 14:
         print("Ejecutando opción 14")
-        # Agregar código para la opción 14
-        
+        def calcular_punto_encuentro(km1, km2):
+    distancia_entre_personas = abs(km1 - km2)
+    return max(km1, km2) - distancia_entre_personas / 2
+def main():
+    # Posiciones iniciales de las personas en la carretera
+    km_persona1 = 70
+    km_persona2 = 150
+    punto_encuentro = calcular_punto_encuentro(km_persona1, km_persona2)
+    print(f"Las personas se encontrarán en el kilómetro {punto_encuentro}.")
+if __name__ == "__main__":
+    main()
+    print("Elaborado por Gabriel Gusqui")  
     elif opcion == 15:
         print("Ejecutando opción 15")
-        # Agregar código para la opción 15
+        def calcular_pago_mensual(meses):
+    pago_mensual = 0
+    for mes in range(meses):
+        pago_mensual += 10 * (2 ** mes)
+    return pago_mensual
+
+def calcular_total_pagado(meses):
+    total_pagado = 0
+    for mes in range(meses):
+        total_pagado += 10 * (2 ** mes)
+    return total_pagado
+
+def main():
+    meses = 20
+
+    pago_mensual = calcular_pago_mensual(meses)
+    total_pagado = calcular_total_pagado(meses)
+
+    print(f"El pago mensual es de {pago_mensual} €.")
+    print(f"El total pagado después de {meses} meses es de {total_pagado} €.")
+
+if __name__ == "__main__":
+    main()
+print("Elaborado por Gabriel Gusqui")
             
     elif opcion == 16:
         print("Ejecutando opción 16")
