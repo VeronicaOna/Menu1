@@ -332,7 +332,7 @@ if __name__ == "__main__":
     print("Elaborado por Valeria Manobanda")         
     elif opcion == 14:
         print("Ejecutando opción 14")
-        def calcular_punto_encuentro(km1, km2):
+def calcular_punto_encuentro(km1, km2):
     distancia_entre_personas = abs(km1 - km2)
     return max(km1, km2) - distancia_entre_personas / 2
 def main():
