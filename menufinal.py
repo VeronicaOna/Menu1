@@ -305,7 +305,7 @@ def ejecutar_opcion(opcion):
         
     elif opcion == 13:
         print("Ejecutando opción 13")
-        def ingresar_horas_trabajadas(dias):
+def ingresar_horas_trabajadas(dias):
     horas_trabajadas = []
     for i in range(dias):
         horas = float(input(f"Ingrese las horas trabajadas el día {i+1}: "))
