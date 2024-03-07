@@ -95,8 +95,19 @@ def ejecutar_opcion(opcion):
 def main():
     while True:
         mostrar_menu()
-        opcion = int(input("Selecciona una opción: "))
-        ejecutar_opcion(opcion)
+        opcion = input("Selecciona una opción: ")
+
+        while True:
+            try:
+                opcion = int(opcion)
+                if 1 <= opcion <= 22:
+                    ejecutar_opcion(opcion)
+                    break
+                else:
+                    print("Opción fuera de rango")
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
+            opcion=input("Selecciona una opción: ")
 
 if __name__ == "__main__":
     main()
