@@ -305,31 +305,33 @@ def ejecutar_opcion(opcion):
         
     elif opcion == 13:
         print("Ejecutando opción 13")
-def ingresar_horas_trabajadas(dias):
-    horas_trabajadas = []
-    for i in range(dias):
-        horas = float(input(f"Ingrese las horas trabajadas el día {i+1}: "))
-        horas_trabajadas.append(horas)
-    return horas_trabajadas
+        def ingresar_horas_trabajadas(dias):
+            horas_trabajadas = []
+            for i in range(dias):
+                horas = float(input(f"Ingrese las horas trabajadas el día {i+1}: "))
+                horas_trabajadas.append(horas)
+            return horas_trabajadas
 
-def calcular_total_horas(horas_trabajadas):
-    return sum(horas_trabajadas)
+        def calcular_total_horas(horas_trabajadas):
+            return sum(horas_trabajadas)
 
-def calcular_sueldo(total_horas, salario_por_hora):
-    return total_horas * salario_por_hora
+        def calcular_sueldo(total_horas, salario_por_hora):
+            return total_horas * salario_por_hora
 
-def main():
-    dias_trabajados = 6
-    horas_trabajadas = ingresar_horas_trabajadas(dias_trabajados)
-    salario_por_hora = 10  # Ejemplo: $10 por hora
-    total_horas_trabajadas = calcular_total_horas(horas_trabajadas)
-    sueldo = calcular_sueldo(total_horas_trabajadas, salario_por_hora)
-    print(f"Total de horas trabajadas durante la semana: {total_horas_trabajadas}")
-    print(f"Sueldo correspondiente: ${sueldo}")
+        def main():
+            dias_trabajados = 6
+            horas_trabajadas = ingresar_horas_trabajadas(dias_trabajados)
+            salario_por_hora = 10  
+            total_horas_trabajadas = calcular_total_horas(horas_trabajadas)
+            sueldo = calcular_sueldo(total_horas_trabajadas, salario_por_hora)
+            print(f"Total de horas trabajadas durante la semana: {total_horas_trabajadas}")
+            print(f"Sueldo correspondiente: ${sueldo}")
 
-if __name__ == "__main__":
-    main()
-    print("Elaborado por Valeria Manobanda")         
+        if __name__ == "__main__":
+            main()
+            print("Elaborado por Valeria Manobanda") 
+
+
     elif opcion == 14:
         print("Ejecutando opción 14")
 def calcular_punto_encuentro(km1, km2):
